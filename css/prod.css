@@ -1,7 +1,7 @@
 /*Styling of MAIN SECTIONS*/
 #main{
 	width: 100%; 
-	height: 1600px;
+	height: 2400px;
 	background-color: black; 
 }
 .section_elem{
@@ -90,4 +90,11 @@
   	background-position: center;
   	background-size: cover;
 }
+#prod_section_6{
+  	background-image: url("../img/beauty.jpg");
+  	background-position: center;
+  	background-size: cover;
+}
+
+
 
