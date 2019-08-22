@@ -1,0 +1,109 @@
+- Title: sateliteHD
+
+- References:
+
+	https://www.supersonido.es/
+	https://www.bowers-wilkins.es/
+	https://www.dahuasecurity.com/es
+	https://www.kartina.tv
+
+- Description: página web de una empresa. Informativa, sobre sus productos y servicios. Venta online solo de un producto.
+
+Inicio
++-------------------------------------------------------------------------+
+| 					|language ES | RU |	|log in|  | (1) Selección del idioma. (2) Log in.
++-------------------------------------------------------------------------+
+| inicio | productos y servicios | marcas | eventos y noticias | contacta | (3) Barra del menú.
++-------------------------------------------------------------------------+
+|								Lupa	  |
++-------------------------------------------------------------------------+
+|									  |
+|									  |
+|			SLIDESHOW Fotos / videos			  | (4) Slideshow de fotos / videos.
+|									  |
+|									  |
++-------------------------------------------------------------------------+
+|   +------------------+    +------------------+   +------------------+   |
+|   |		       |    |                  |   |                  |   |
+|   |		       |    |                  |   |                  |   |
+|   |		       |    |                  |   |                  |   |
+|   |		       |    |                  |   |                  |   | (5) Productos y servicios destacados.
+|   |		       |    |                  |   |                  |   |
+|   |		       |    |                  |   |                  |   |
+|   +------------------+    +------------------+   +------------------+   |
+|								ver mas...| (6) Link que redirecciona a 
++-------------------------------------------------------------------------+     "productos y servicios".
+|   +------------------+    +------------------+   +------------------+   |
+|   |		       |    |                  |   |                  |   |
+|   |		       |    |                  |   |                  |   |
+|   |		       |    |                  |   |                  |   |
+|   |		       |    |                  |   |                  |   | (7) Eventos destacados y útlimas
+|   |		       |    |                  |   |                  |   |     notícias.
+|   |		       |    |                  |   |                  |   |
+|   +------------------+    +------------------+   +------------------+   |
+|								ver mas...| (8) Link que redirecciona a
++-------------------------------------------------------------------------+    "eventos y notícias".
+|  BOTTOM: mapa del sitio						  |
++-------------------------------------------------------------------------+
+
+(1) Selección del idioma: principalmente dos castellano y ruso. Opcionalmente se puede añadir el inglés.
+(2) Log in. Si el usuario no está registrado, debe registrarse, tiene que salir un foprmulario de registración
+(no sé si hay normativa acerca de qué información se puede pedir en un formulario y cómo va el tema del cifrado 
+de la contraseña, etc). Básicamente, primero, para registrarse el usuario debe indicar si és un cliente o una empresa. 
+A partir de ahí, hay que rellenar los campos que aparecen a continuación:
+
+Log in
++-------------------------------------------------------------------------+
+|					|language ES | RU |	|log in|  | 
++-----------------------------------------+*******************************+
+| inicio | productos y servicios | marcas * Usuario    _________________  *
++-----------------------------------------* Contraseña _________________  * Aparece una ventana como esta...
+|					  *	        |ENTRA|		  *
++-----------------------------------------*     No tienes una cuenta?     * 
+|					  *           |REGISTER| 	  *
+|					  +*******************************+				  
+|			SLIDESHOW Fotos / videos			  | 
+|									  |
+|									  |
++-------------------------------------------------------------------------+
+|   +------------------+    +------------------+   +------------------+   |
+|   |		       |    |                  |   |                  |   |
+|   |		       |    |                  |   |                  |   |
+|   |		       |    |                  |   |                  |   |
+|   |		       |    |                  |   |                  |   | 
+|   |		       |    |                  |   |                  |   |
+|   |		       |    |                  |   |                  |   |
+
+Si el usuario clica a registrarse, se redirecciona a un formulario de registro:
+
+Formulario
+
+EDIT: resulta que sin una base de datos y un servidor es imposible hacer la gestion de los clientes y el registro con 
+contrasena y etc. A no ser que sea una simulacion.
+
+Mapa del sitio:
+Barra de menú, con desplegables: inicio, productos y servicios (se desplegan por topics), contacto, mi cuenta 
+(log in o sign in). Arriba de todo tiene que haber el botón para cambiar el idioma de la página (español / ruso / english?).
+
+En el inicio tendremos acceso a los productos y servicios más destacados. También, 
+si hay alguna novedad, se publica en la página de inicio.
+
+En productos tendremos información , entre cámaras, televisores, etc. Se clasifican por topics:
+  - Audiovisuales (+ sonido, televisión satélite, televisión ip).
+  - Telecomunicaciones (internet móvil 4G, redes wi-fi, comunicaciones ip)
+  - Sistemas de seguridad (videovigilancia y alarmas).  
+En servicios: instalación, mantenimiento.
+
+Notícias y eventos: links a otras páginas web, notícias del sector.
+
+Sobre nosotros y contacto: 
+ - Acerca de nosotros.
+ - Información de contacto básica: horarios, teléfonos, emails y mapa de localización.
+ - Contacto online: un formulario para enviar un mensaje al correo del admin.
+
+Mi cuenta: tiene que haber un formulario de registración de los clientes. Nombre de usuario, contraseña, 
+teléfono y email del cliente. Los clientes en mi cuenta tendran disponibles sus datos, podran descargar tarifas y programas
+de mantenimiento y podran realizar la compra de un producto especifico (la targeta de credito tambien se tiene que poner?).
+
+
+

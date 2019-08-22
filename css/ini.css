@@ -1,0 +1,148 @@
+/*Styling of MAIN SECTIONS*/
+#main{
+	width: 100%; 
+	height: 1600px;
+	background-color: black; 
+}
+.section_elem{
+	width: 100%;
+	height: 400px;
+
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+}
+
+#ini_prod_section_1{
+	background-image: url("../img/altered.jpg");
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+#ini_prod_section_3{
+	background-image: url("../img/carbon.jpg");
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+
+  	background-color: blue;
+}
+
+#ini_prod_section_2{
+	background-color: black;
+}
+
+.section_elem > div{
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	height: 300px; 
+	width: 1000px; 
+	background-color: black; 
+	border: 8px solid black;
+}
+.section_elem > div > div{
+	background-color: black; 
+	width: 320px;
+	height: 290px; 
+	margin: 8px;
+}
+.section_elem > div > div > div:first-child{
+	position: relative;
+}
+.section_elem > div > div > div:last-child{
+	background-color: rgb(38, 38, 38);
+	width: 100%; 
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.section_elem > div > div > div:last-child span{
+	color: white;
+	font-family: Optima;
+}
+.section_elem > div > div > img{
+	width: 320px; 
+	height: 240px;
+	overflow: hidden;
+}
+#pic_1_1{
+	width: 320px; 
+	height: 240px;
+	background-image: url("../img/bw_nautilus_2.png"); 
+	background-position: left;
+	background-size: cover;
+}
+#pic_1_2{
+	width: 320px; 
+	height: 240px;
+	background-image: url("../img/4g_generic.jpg"); 
+	background-position: center;
+	background-size: cover;
+}
+#pic_1_3{
+	width: 320px; 
+	height: 240px;
+	background-image: url("../img/artnovion5.jpg"); 
+	background-position: center;
+	background-size: cover;
+}
+#pic_2_1{
+	width: 320px; 
+	height: 240px;
+	background-image: url("../img/oled_eisa.jpg"); 
+	background-position: left;
+	background-size: cover;
+}
+#pic_2_1 > div{
+	background-color: pink; 
+	height: 54px; 
+	width: 100px; 
+	position: absolute; 
+	bottom: 30px; 
+	right: 20px; 
+	background-image: url("../img/eisa_logo_2.png");
+	background-position: center;
+	background-size: cover;
+}
+#pic_2_2{
+	width: 320px; 
+	height: 240px;
+	background-image: url("../img/denon_eisa.jpg"); 
+	background-position: center;
+	background-size: cover;
+}
+#pic_2_3{
+	width: 320px; 
+	height: 240px;
+	background-image: url("../img/philips_eisa.jpg"); 
+	background-position: center;
+	background-size: cover;
+}
+#pic_2_3 > div{
+	background-color: pink; 
+	height: 54px; 
+	width: 100px; 
+	position: absolute; 
+	bottom: 30px; 
+	left: 20px; 
+	background-image: url("../img/eisa_logo.png");
+	background-position: center;
+	background-size: cover;
+}
+#pic_3_1{
+	width: 320px; 
+	height: 240px;
+	background-image: url("../img/kartina_receiver.jpg"); 
+	background-position: left;
+	background-size: cover;
+}
+
+
+
+
+
