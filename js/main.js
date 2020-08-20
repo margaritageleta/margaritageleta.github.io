@@ -277,13 +277,13 @@ window.onload = function(){
       /** @type {number} */
       O = 0;
       if (2 != event.button) {
-        gotoNewOfflinePage();
+        //gotoNewOfflinePage();
       }
     });
     let currentColumn = 0;
     canvas.addEventListener("wheel", (canCreateDiscussions) => {
       if (currentColumn < 4) {
-        gotoNewOfflinePage();
+        //gotoNewOfflinePage();
       }
       if (2 == currentColumn) {
         setTimeout(function() {

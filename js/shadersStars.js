@@ -38,7 +38,7 @@ const vPhysicsStars = `
   
   void main() {
     v_texcoord = 0.5 * a_position + 0.5;
-    gl_Position = vec4(a_position, 0.0, 1.0);
+    gl_Position = vec4(a_position, 0.0, 1);
   }`;
 const fPhysicsStars = (i) => `
   precision highp float;
@@ -74,8 +74,8 @@ const fPhysicsStars = (i) => `
     dc = rcurr - vec2(0.5);
 
     // physics emulation
-    rnext = rcurr + dm * 0.015 * dt / zcurr;
-    znext = zcurr - 0.015 * dt;
+    rnext = rcurr + dm * 0.005 * dt / zcurr;
+    znext = zcurr - 0.005 * dt;
 
     // edge detection
     znext += (1.0 - 0.002 * v2rand.x * v2rand.y - znext) * (step(0.0, abs(rnext.x - 0.5)-0.5) + step(0.0, abs(rnext.y - 0.5)-0.5));
@@ -122,7 +122,7 @@ const fDrawStars = `
   }
 
   void main () {
-    float color = (1.0 - second_draw) * (0.1 + 0.9 * specific_rand(2.0*v_texcoord-1.0));
+    float color = (1.0 - second_draw) * (0.1 + 0.5 * specific_rand(2.0 * v_texcoord - 1.0));
     gl_FragColor = vec4(vec3(color), 1.0);
   }`;
 
