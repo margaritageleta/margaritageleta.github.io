@@ -1,0 +1,76 @@
+@font-face {
+	font-family: 'neon';
+	src: url('../fonts/Neoneon.otf') format('opentype'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	url('../fonts/Neoneon.otf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+@font-face {
+	font-family: 'vampire';
+	src: url('../fonts/Neon Vampire.ttf') format('opentype'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	url('../fonts/Neon Vampire.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+@font-face {
+	font-family: 'delirium';
+	src: url('../fonts/28\ Days\ Later.ttf.ttf') format('opentype'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	url('../fonts/28\ Days\ Later.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
+
+:root {
+	--neon-glow: hotpink;
+	--neon-glow-2: pink;
+}
+
+/*Define no margin and no padding to html*/
+html, body{
+	margin:0;
+	padding: 0;
+	background-color: black;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#space {
+	width: 100%;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+header > div {
+	position: absolute;
+}
+
+header h1 {
+	margin: 0;
+	font-family: 'vampire', sans-serif;
+	font-size: 6em;
+
+	color: #fff;
+	text-shadow: 0 0 0.1em var(--neon-glow), 
+		0 0 0.1em var(--neon-glow), 
+		0 0 1em var(--neon-glow), 
+		0 0 1em var(--neon-glow);
+	letter-spacing: 0.2em;
+	font-weight: normal;
+	line-height: 1.75;
+	text-transform: uppercase;
+}
+
+header h2 {
+	margin: 0;
+	font-family: 'neon', sans-serif;
+	font-size: 2em;
+
+	color:white;
+	text-shadow: 0 0 0.1em var(--neon-glow-2), 
+		0 0 0.1em var(--neon-glow-2), 
+		0 0 1em var(--neon-glow-2), 
+		0 0 1em var(--neon-glow-2);
+	letter-spacing: 0.2em;
+}
