@@ -122,7 +122,7 @@ const fDrawStars = `
   }
 
   void main () {
-    float color = (1.0 - second_draw) * (0.1 + 0.5 * specific_rand(2.0 * v_texcoord - 1.0));
+    float color = (1.0 - second_draw) * (0.2 + 0.5 * specific_rand(2.0 * v_texcoord - 1.0));
     gl_FragColor = vec4(vec3(color), 1.0);
   }`;
 
