@@ -28,13 +28,13 @@ window.onload = function(){
       textureColor : [1, 1, 1, 0]
     });
     
-    let w = [0, 1].map((canCreateDiscussions) => {
+    /*let w = [0, 1].map((canCreateDiscussions) => {
         return twgl.createTexture(gl, {
-          src : `static/logos/logo${canCreateDiscussions}.png`,
+          src : ``,
           flipY : true,
           wrap : gl.CLAMP_TO_EDGE
         });
-      });
+      });*/
     
     let width = 200;
     let total = 512;
@@ -212,16 +212,16 @@ window.onload = function(){
       });
       twgl.bindFramebufferInfo(gl, null);
       twgl.drawBufferInfo(gl, mode, gl.POINTS);
-      gl.useProgram(program.program);
-      twgl.setBuffersAndAttributes(gl, program, drawObjects);
-      twgl.setUniforms(program, {
-        u_logotex : [w[IEADD], w[timeInfo]],
-        u_curr : res.map((aArgs) => {
+      //gl.useProgram(program.program);
+      //twgl.setBuffersAndAttributes(gl, program, drawObjects);
+      //twgl.setUniforms(program, {
+        //u_logotex : [w[IEADD], w[timeInfo]],
+        /*u_curr : res.map((aArgs) => {
           return aArgs.attachments[0];
-        }),
-        point_size : 3 * Math.max(b[0] * gl.canvas.clientWidth / total, b[1] * gl.canvas.clientHeight / total, .8),
-        explosion_timer : y
-      });
+        }),*/
+        //point_size : 3 * Math.max(b[0] * gl.canvas.clientWidth / total, b[1] * gl.canvas.clientHeight / total, .8),
+        //explosion_timer : y
+      //});
       twgl.bindFramebufferInfo(gl, null);
       twgl.drawBufferInfo(gl, drawObjects, gl.POINTS);
       [0, 1, 2].forEach((i) => {
