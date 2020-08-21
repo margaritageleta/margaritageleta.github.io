@@ -127,7 +127,7 @@ main {
 }
 
 section {
-	height: 60vh;
+	height: max-content;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -151,6 +151,7 @@ section h1 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-bottom: 1em;
 }
 
 .wall > div:last-child {
@@ -162,9 +163,14 @@ section h1 {
 }
 
 .about {
-	width: 50%;
+	width: 100%;
 	height: max-content;
 	padding: 0 10px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .wall > div:last-child {
@@ -282,4 +288,68 @@ section h1 {
     color: var(--terminal-prompt-git);
 }
 
+.links {
+	width: 100%;
+	height: 15vh;
 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.links i {
+	margin: 0.4em;
+	font-size: 4em;
+	color: white;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.links a {
+	text-decoration: none;
+}
+
+.cards {
+	width: 100%;
+	height: max-content;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.cards h4 {
+	margin: 0;
+	font-family: 'vampire', sans-serif;
+	font-size: 3em;
+
+	color: #fff;
+	text-shadow: 0 0 0.1em var(--neon-glow), 
+		0 0 0.1em var(--neon-glow), 
+		0 0 1em var(--neon-glow), 
+		0 0 1em var(--neon-glow);
+	letter-spacing: 0.2em;
+	font-weight: normal;
+	line-height: 1.75;
+	text-transform: uppercase;
+}
+
+
+
+@media only screen and (max-width: 720px) {
+	header h1 {
+		font-size: 5em;
+	}
+	.terminal-body {
+		width: auto;
+	}
+	.links i {
+		font-size: 3em;
+	}
+
+	.cards {
+		flex-direction: column;
+	}
+
+}
