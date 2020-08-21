@@ -299,16 +299,17 @@ section h1 {
 	align-items: center;
 }
 
-.links i {
+i {
 	margin: 0.4em;
-	font-size: 4em;
+	font-size: 4em !important;
 	color: white;
 	font-weight: normal;
 	text-transform: uppercase;
 }
 
-.links a {
+a, a:hover, a:visited, a:active {
 	text-decoration: none;
+	color: inherit;
 }
 
 .cards {
@@ -425,12 +426,40 @@ section h1 {
 }
 
 .glow__card p {
-	color: white;
+	color: var(--terminal-body-text);
 	font-family: 'Courier';
 	/*text-transform: uppercase;*/
 	margin: 5px 10px;
+	font-size: 13px;
 }
 
+.glow__card i {
+	margin: 0.1em;
+	margin-bottom: 0.2em;
+}
+
+.art {
+	background-image: url("../img/art.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 400px;
+}
+
+footer {
+	color: white;
+	text-align: center;
+	font-family: 'delirium', sans-serif;
+	font-size: 1.5em;
+	letter-spacing: 0.2em;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer > div {
+	width: max-content;
+}
 
 
 @media only screen and (max-width: 720px) {
