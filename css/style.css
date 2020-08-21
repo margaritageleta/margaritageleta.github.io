@@ -208,9 +208,11 @@ section h1 {
 	cursor: pointer;
 }
 
+/*
 .terminal-body:hover {
 	transform: scale(1.1);
 }
+*/
 
 .terminal-nav {
     width: 100%;
@@ -313,10 +315,21 @@ section h1 {
 	width: 100%;
 	height: max-content;
 
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 20px [ini] 1fr [mid1] 20px [mid2] 1fr [end] 20px;
+
+	text-align: center;
+}
+
+.cards > div:first-child {
+	grid-column-start: ini;
+	grid-column-end: mid1;
+}
+
+.cards > div:last-child {
+	grid-column-start: mid2;
+	grid-column-end: end;
 }
 
 .cards h4 {
@@ -335,6 +348,89 @@ section h1 {
 	text-transform: uppercase;
 }
 
+.glow__card {
+	width: 100%;
+	height: max-content;
+	margin: 10px 0;
+
+	background-color: var(--terminal-body);
+     /* Borders of the terminal window */
+    border-radius: 7.5px;
+    border: solid gainsboro 1px;
+    /* Shadow of terminal window */
+    -webkit-box-shadow: 0 0 0.1em var(--neon-glow-2), 
+	0 0 0.1em var(--neon-glow-2), 
+	0 0 1em var(--neon-glow);
+    -moz-box-shadow: 0 0 0.1em var(--neon-glow-2), 
+	0 0 0.1em var(--neon-glow-2), 
+	0 0 1em var(--neon-glow);
+    box-shadow: 0 0 0.1em var(--neon-glow-2), 
+	0 0 0.1em var(--neon-glow-2), 
+	0 0 1em var(--neon-glow);
+}
+
+.glow__card h5 {
+	color: white;
+	font-family: 'delirium';
+	font-size: 2em;
+	margin: 5px 10px;
+}
+
+.glow__card span  {
+	color: white;
+	font-family: 'neon';
+	font-size: 1.5em;
+}
+
+.python {
+	text-shadow: 0 0 0.1em yellowgreen, 
+		0 0 0.1em yellowgreen, 
+		0 0 1em yellowgreen, 
+		0 0 1em yellowgreen;
+}
+
+.html {
+	text-shadow: 0 0 0.1em gold, 
+		0 0 0.1em gold, 
+		0 0 1em gold, 
+		0 0 1em gold;
+}
+
+.css {
+	text-shadow: 0 0 0.1em plum, 
+		0 0 0.1em plum, 
+		0 0 1em plum, 
+		0 0 1em plum;
+}
+
+.js {
+	text-shadow: 0 0 0.1em orange, 
+		0 0 0.1em orange, 
+		0 0 1em orange, 
+		0 0 1em orange;
+}
+
+.dart {
+	text-shadow: 0 0 0.1em dodgerblue, 
+		0 0 0.1em dodgerblue, 
+		0 0 1em dodgerblue, 
+		0 0 1em dodgerblue;
+}
+
+.cc {
+	text-shadow: 0 0 0.1em palevioletred, 
+		0 0 0.1em palevioletred, 
+		0 0 1em palevioletred, 
+		0 0 1em palevioletred;
+}
+
+.glow__card p {
+	color: white;
+	font-family: 'Courier';
+	/*text-transform: uppercase;*/
+	margin: 5px 10px;
+}
+
 
 
 @media only screen and (max-width: 720px) {
@@ -350,6 +446,14 @@ section h1 {
 
 	.cards {
 		flex-direction: column;
+		grid-template-rows: 1fr;
+		grid-template-columns: 20px [ini] 1fr [end] 20px;
+	
+	}
+	
+	.cards > div:first-child, .cards > div:last-child {
+		grid-column-start: ini;
+		grid-column-end: end;
 	}
 
 }
