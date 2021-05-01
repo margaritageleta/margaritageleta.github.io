@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 <head>
 	<title>3omni @ your device</title>
 	<meta charset="UTF-8">
@@ -41,169 +42,195 @@
 	<meta name="application-name" content="3omni">
 	<meta name="theme-color" content="hotpink">
 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src=https://cdn.jsdelivr.net/npm/twgl-base.js@4.8.2/dist/4.x/twgl.min.js></script>
-	<script src="js/shaders/shadersStars.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/scroll.js"></script>
+	<script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js" integrity="sha512-CSBhVREyzHAjAFfBlIBakjoRUKp5h7VSweP0InR/pAJyptH7peuhCsqAI/snV+TwZmXZqoUklpXp6R6wMnYf5Q==" crossorigin="anonymous"></script>
+	<!--<script src="js/modernizr.custom.js"></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/color.min.js"></script>
+	<script src="js/loadPosts.js"></script>
+	<script>
+		function randomize(id) {
+			var generator = new ColorfulBackgroundGenerator();
+			// The parameters are: degree[0-360],
+			//                     h[0-360], 
+			//                     s[0-1], 
+			//                     l[0-1],
+			//                     posColor[0-100], 
+			//                     posTransparency[0-100]
+			// The lowest layer (at the bottom) in the css is the first added layer.
+			var posColorArr = [100, 30, 10, 0, 0];
+			var posTransparencyArr = [0, 80, 80, 70, 55];
+			for (var i=0; i<5; i++) {
+				generator.addLayer(new ColorfulBackgroundLayer({
+					degree: Math.floor(Math.random() * 360), 
+					h: Math.floor(Math.random() * 360), 
+					s: Math.random() * (1 - 0.6) + 0.6,
+					l: Math.random() * (1 - 0.5) + 0.1, 
+					posColor: posColorArr[i],
+					posTransparency: posTransparencyArr[i],
+				})
+				); // bottom layer
+			}
+			// Assign generated style to the element identified by it's id
+			generator.assignStyleToElementId("body");
+		}
+
+	
+	$.fn.inView = function(){
+		if(!this.length) 
+			return false;
+		var rect = this.get(0).getBoundingClientRect();
+		return (
+			// rect.top >= 100 &&
+			//rect.left >= 0 &&
+			rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) * 1.25 //&&
+			//rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		);
+
+	};
+
+	// Additional examples for other use cases
+	// Is true false whether an array of elements are all in view
+	$.fn.allInView = function(){
+		var all = [];
+		this.forEach(function(){
+			all.push( $(this).inView() );
+		});
+		return all.indexOf(false) === -1;
+	};
+
+	// Only the class elements in view
+	/*$('.shown').filter(function(){
+		return $(this).inView();
+	});*/
+
+	// Only the class elements not in view
+	/*$('.some-class').filter(function(){
+		return !$(this).inView();
+	});*/
+	$(document).ready(function(){
+		console.log('pre ajax');
+		loadPosts();
+		console.log('post ajax');
+
+		$('#main').on('scroll', function() {
+			$('#grid-1 > li').each(function () {
+				if($('#'+this.id).inView()) {
+					$('#'+this.id).addClass( "shown" );
+				}
+			});
+			$('#grid-2 > li').each(function () {
+				if($('#'+this.id).inView()) {
+					$('#'+this.id).addClass( "shown" );
+				}
+			});
+		});
+	});
+	
+/*
+$(function() {
+     $(window).on('scroll', function () { 
+       console.log('scroll happened'); 
+      });
+});*/
+</script>
 </head>
-<body>
-	<header>
-		<canvas id="space"></canvas>
-		<div>
-			<h1>3omni</h1>
-			<h2>Rita Geleta's website</h2>
-		</div>
-		<div class="bottom__hero">
+
+	<body id="body" onload="randomize();">
+		
+		<nav>
 			<div>
-				<a href="#whoami"><h3>⬇︎ Slide down ⬇︎</h3></a>
-			</div>
-		</div>
-	</header>
-	<main>
-		<section num="1" id="whoami">
-			<div class="wall">
 				<div>
-					<h1>$(whoami)</h1>
+					<p>Blog</p>
+					<div></div>
 				</div>
 				<div>
-					<div class="about">
-						<div class="terminal-body">
-							<div class="terminal-nav">
-								<div class="terminal-menu">
-									<div></div>
-									<div></div>
-									<div></div>
-								</div>
-								<div class="terminal-name">
-									<span>3omni@Rita — ~/ — 63x7</span>
-								</div>
-							</div>
-							<div class="terminal-body-content">
-								
-								<p><span class="prompt">3omni$&nbsp</span>whoami | grep species</p>  
-								<p><b>species: hypothetically human</b></p>
-
-								<p><span class="prompt">3omni$&nbsp</span>whoami | more</p>  
-								<p><b>data scientist & enginner ~ designer ~ developer</b></p> 
-								
-								<p><span class="prompt">3omni$&nbsp</span><span class="terminal-underscore"></span></p> 
-								
-							</div>
-						</div>
-						<div class="links">
-							<a href="https://twitter.com/ritageleta" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
-							<a href="https://www.instagram.com/3omni/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
-							<a href="https://github.com/margaritageleta" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
-							<a href="https://es.linkedin.com/in/margarita-geleta" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+					<p>Art</p>
+					<div></div>
+				</div>
+				<div>
+					<p>About</p>
+					<div></div>
+				</div>
+			</div>
+			
+		</nav>
+		<main id="main">
+			<!--<canvas id="space"></canvas>-->
+			<div class="hero">
+				<h1>3omni</h1>
+				<h2>Rita Geleta's website</h2>
+				
+			</div>
+			<div class="bottom__hero">
+				<div class="bg_translucid">
+					<div class="wrapper">
+						<div class="wrapped">
+							<p>The ubiquity of data and the access to vast computational power has triggered a tectonic shift that is incrementally changing the way we communicate, work, interact, and more generally, live. <b>What decades ago was just an unattainable quixotic dream, today it is becoming a reality</b> - we have systems and tools that can analyze, take actions and reduce the uncertainty of the near future.</p>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section num="2">
-			<div class="wall">
-				<div><h1>Projects</h1></div>
-				<div>
-					<div class="cards">
-						<div>
-							<h4>Data</h4>
-							<div class="glow__card">
-								<h5>Toxicity Detector</h5>
-								<div>
-									<span class="python">Python</span>&nbsp
-									<span class="html">HTML</span>&nbsp
-									<span class="css">CSS</span>&nbsp
-									<span class="js">JS</span>
-								</div>
-								<p>NLP deep learning model for toxicity detection in text (English, Spanish, Turkish, Russian, French, Portuguese, Italian), trained on a TS-877 Ryzen-based NAS with 8 cores and 16 threads, with a GeForce GTX 1060 6GB graphics card. With deployment of the model (Tensorflow + Flask + AJAX).</p>
-								<a href="https://github.com/margaritageleta/multilingual-toxicity-detector" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
-							</div>
-
-							<div class="glow__card">
-								<h5>Human Skin Detector</h5>
-								<div>
-									<span class="python">Python</span>
-								</div>
-								<p>Skin segmentation is basic and key in the hand gesture recognition. Since skin color is within a threshold range, thresholding a color space, we can swiftly segment the desired region.</p>
-								<a href="https://github.com/margaritageleta/human-skin-detector" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
-							</div>
-							<h4>Art</h4>
-							<div class="glow__card">
-								<h5>HackUPC19 design</h5>
-								<p>Led brand redesign in 30-person team for HackUPC 2019, Spain's largest student hackathon with 700 attendees. Designed
-									web, merchandising and social network post templates.</p>
-								<a href="https://hackupc.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-laptop"></i></a>
-							</div>
-							<div class="glow__card art">
-								<h5>My Portfolio</h5>
-								<p>My art on DeviantArt.</p>
-								<a href="https://www.deviantart.com/margaritageleta" target="_blank" rel="noopener noreferrer"><i class="fa fa-deviantart"></i></a>
-							</div>
-						</div>
-						<div>
-							<h4>Dev</h4>
-							<div class="glow__card">
-								<h5>ProxiShop e-commerce platform</h5>
-								<div>
-									<span class="dart">Dart</span>&nbsp
-									<span class="python">Python</span>&nbsp
-									<span class="html">HTML</span>&nbsp
-									<span class="css">CSS</span>&nbsp
-									<span class="js">JS</span>
-								</div>
-								<p>Developed a trading multi-platform e-commerce solution for local farmers and small businesses to reactivate the economy
-									in Catalonia in times of the pandemic and the confinement due to COVID-19 which has led the proximity trade to a cease.
-									This project has joined the 1000 European Initiatives by JEE (Junior Enterprises Europe).</p>
-								<a href="https://www.proxishop.cat/" target="_blank" rel="noopener noreferrer"><i class="fa fa-laptop"></i></a>
-							</div>
-							<div class="glow__card">
-								<h5>ConfinApp Commerce</h5>
-								<div>
-									<span class="python">Python</span>&nbsp
-									<span class="html">HTML</span>&nbsp
-									<span class="css">CSS</span>&nbsp
-									<span class="js">JS</span>
-								</div>
-								<p>Designed a mobile application to promote the proximity commerce during the first stage of the confinement. This project
-									has been one of the highlighted projects of Hackovid, a hackathon by the Government of Catalonia.</p>
-								<a href="https://github.com/Casassarnau/ConfinAppCommerce" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
-							</div>
-							<div class="glow__card">
-								<h5>Optimization Algorithms</h5>
-								<div>
-									<span class="python">Python</span>
-								</div>
-								<p>Implemented from zero several unconstrained optimization algorithms, including GM, CGM, BFGS, NM & MNM-Cholesky
-									in Python. Developed a function for plotting the 2D minimization path.</p>
-								<a href="https://github.com/margaritageleta/optrita" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
-							</div>
-							<div class="glow__card">
-								<h5>Slack History Exporter</h5>
-								<div>
-									<span class="python">Python</span>
-								</div>
-								<p>Slack does not make it easy to export DM conversations. I do.</p>
-								<a href="https://github.com/margaritageleta/slack-export-history" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
-							</div>
-							<div class="glow__card">
-								<h5>Polynomial Calculator</h5>
-								<span class="cc">C++</span>
-								<p>Implemented a calculator for operations with polynomials in C++, along with algorithms such as the Fast Fourier Transform
-									and the inverse Fast Fourier Transform for point-value polynomial multiplication.</p>
-								<a href="https://github.com/margaritageleta/polynomial-calculator" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
-							</div>
-						</div>
-					</div>
+				<div class="bg_black">
+					<div class="wrapper">
+						<div class="wrapped">
+							<p>Looking with hindsight, the achievements of <b>connectionist systems</b> are impressive but many times they lack understanding. Deep Learning is built on many heuristics, which reliably predict outcomes of experiments, yet oftentimes they are not defined mathematically and the lack of some rigorous or pellucid definitions can lead to the vision of Deep Neural Networks as “black boxes” and, furthermore, research starts being a chase behind state-of-the-art architectures and a phenomenon called “stacking more layers” is taking place, without a real understanding of the decision rules which could lead to the gist of the improvement. </p>
+							<br><p>In my view, the goal of any scientific field is to build <b>understanding, interpretability & intuition</b> behind perhaps complex, yet naturally motivated, algorithms and techniques. It may not seem so crucial, although I have noticed that this, in relatively short-term, can become the bottleneck of research. </p> 
+							<!--<blockquote>$\displaystyle{ \sum_{i=1}^N x^2 }$</blockquote>
+							<blockquote>$\begin{eqnarray} x\in \{0,1\} \end{eqnarray}$</blockquote>-->
+						</div>	
+					</div>	
 				</div>
-			</div>
-		</section>
-		<footer>
-			<div>
-				<a href="#"><h3>⬆︎ Go to top ⬆︎</h3></a>
-			</div>
-		</footer>
-	</main>
+				<!--<div class="bg_translucid">
+					<div class="wrapper">
+						<div class="wrapped">
+							<p>I want to raise awareness & understanding - <b>research is like a Brownian motion of tiny incremental innovations</b>, until eventually we come across a real breakthrough.</p>
+							<blockquote>$\displaystyle{ \sum_{i=1}^N x^2 }$</blockquote>
+							<blockquote>$\begin{eqnarray} x\in \{0,1\} \end{eqnarray}$</blockquote>
+						</div>	
+					</div>	
+				</div>-->
+				<!--<div class="bg_black">
+					<div class="wrapper">
+						<div class="wrapped">
+							<div class="terminal-body">
+								<div class="terminal-nav">
+									<div class="terminal-menu">
+										<div></div>
+										<div></div>
+										<div></div>
+									</div>
+									<div class="terminal-name">
+										<span>3omni@Rita — ~/ — 63x7</span>
+									</div>
+								</div>
+								<div class="terminal-body-content">
+									
+									<p><span class="prompt">3omni\$&nbsp</span>whoami | grep species</p>  
+									<p><b>species: hypothetically human</b></p>
+
+									<p><span class="prompt">3omni\$&nbsp</span>whoami | more</p>  
+									<p><b>data scientist & enginner ~ designer ~ developer</b></p> 
+									
+									<p><span class="prompt">3omni\$&nbsp</span><span class="terminal-underscore"></span></p> 
+									
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>-->
+
+				<div class="masonry">
+					<ul class="grid effect-1" id="grid-1">
+					</ul>		
+					<ul class="grid effect-1" id="grid-2">
+					</ul>				  
+				</div>
+			</div>	
+		</main>
+	</body>
 </html>
