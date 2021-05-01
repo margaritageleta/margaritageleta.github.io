@@ -1,0 +1,9 @@
+num: 0
+title: Reading from YAML File 
+peek: but both libraries only have functions that parse YAML when it is given as a string, instead of parsing straight out of a .yml or .yaml file. Are there any parsers that read YAML from a file and convert them to JS objects?
+image: https://images.unsplash.com/photo-1545000649-57ce18e0b436?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80
+
+  
+	
+
+

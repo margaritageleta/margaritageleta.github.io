@@ -1,0 +1,6 @@
+num: 2
+title: I have a webservice that expects to receive JSON
+peek: Is there any way to check the format in which my data is being sent? I'm supposedly not sending correct JSON to the server (that is the first step in validation). Is my jQuery code sending valid JSON or did I miss something?
+image: https://images.unsplash.com/photo-1532446997697-0b92fdc456fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1250&q=80
+
+  
