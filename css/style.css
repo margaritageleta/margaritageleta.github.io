@@ -413,7 +413,7 @@ section h1 {
 	align-items: center;
 }
 
-i {
+i.fa {
 	margin: 0.4em;
 	font-size: 4em !important;
 	color: white;
