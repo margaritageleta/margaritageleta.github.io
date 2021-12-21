@@ -26,6 +26,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
+@viewport {
+	zoom: 1;
+  	max-zoom: 3
+}
+
 :root {
 	--neon-glow: hotpink;
 	--neon-glow-2: pink;
@@ -420,6 +425,21 @@ blockquote {
 	rotate: -90deg;
 }
 
+.artfiles {
+	transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+img {
+	border-radius: 20px;
+	margin: 5px;
+	cursor: pointer;
+	transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+	box-shadow: 0 0 40px rgba(5,5,38,0.38);
+}
+
+img:hover {
+	transform: translateY(-5px);
+}
 
 /*
 linear-gradient(25deg, hsla(301, 60.61%, 58.74%, 1) 0%, hsla(301, 60.61%, 58.74%, 0) 55%), linear-gradient(229deg, hsla(232, 83.54%, 67.57%, 1) 0%, hsla(232, 83.54%, 67.57%, 0) 70%), linear-gradient(306deg, hsla(181, 72.76%, 87.2%, 1) 10%, hsla(181, 72.76%, 87.2%, 0) 80%), linear-gradient(253deg, hsla(307, 79.49%, 68.79%, 1) 30%, hsla(307, 79.49%, 68.79%, 0) 80%), linear-gradient(84deg, hsla(42, 62.61%, 63.39%, 1) 100%, hsla(42, 62.61%, 63.39%, 0) 0%);
@@ -709,6 +729,18 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
 .card__about:hover {
 	transform: translateY(-5px);
 }
+.artfiles {
+	z-index: 10;
+}
+.artfiles2 {
+	background-image: url(../img/artfile6.png);
+	position: absolute;
+	width: 90%;
+	height: 100%;
+	top:0;
+	mix-blend-mode: multiply;
+	z-index: 0;
+}
 
 @media only screen and (max-width: 720px) {
 	.card__about {
@@ -754,6 +786,30 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
 	nav > div div > div {
 		display: none;
 	}
+
+	.artfiles {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.artfiles img {
+		scale: 0.95;
+		width: 100%;
+		height: auto;
+	}
+
+	.artfiles2 {
+		display: none;
+	}
+}
+
+#background__artfile {
+	/*z-index: 100;*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: multiply;
+	/*opacity: 0.5;*/
 }
 
 .card-content-wrapper__about {
