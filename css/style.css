@@ -415,14 +415,29 @@ blockquote {
 
 .corner:first-child {
 	left: 0;
-	-webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 35px, transparent 0px, black 20px);
-	rotate: 180deg;
+	-webkit-mask-image: radial-gradient(circle 50px at 0 0, transparent 35px, transparent 0px, black 20px);
+	-o-mask-image: radial-gradient(circle 50px at 0 0, transparent 35px, transparent 0px, black 20px);
+	-moz-mask-image: radial-gradient(circle 50px at 0 0, transparent 35px, transparent 0px, black 20px);
+	mask-image: radial-gradient(circle 50px at 0 0, transparent 35px, transparent 0px, black 20px);
+	transform:rotate(180deg);
+    -ms-transform:rotate(180deg); /* IE 9 */
+    -moz-transform:rotate(180deg); /* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari and Chrome */
+    -o-transform:rotate(180deg); /* Opera */
 }
 
 .corner:last-child {
 	right: 0;
-	-webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 35px, transparent 0px, black 20px);
-	rotate: -90deg;
+	-webkit-mask-image: radial-gradient(circle 50px at 0 0, transparent 35px, transparent 0px, black 20px);
+	-o-mask-image: radial-gradient(circle 50px at 0 0, transparent 35px, transparent 0px, black 20px);
+	-moz-mask-image: radial-gradient(circle 50px at 0 0, transparent 35px, transparent 0px, black 20px);
+	mask-image: radial-gradient(circle 50px at 0 0, transparent 35px, transparent 0px, black 20px);
+
+	transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg); /* IE 9 */
+    -moz-transform:rotate(-90deg); /* Firefox */
+    -webkit-transform:rotate(-90deg); /* Safari and Chrome */
+    -o-transform:rotate(-90deg); /* Opera */
 }
 
 .artfiles {
