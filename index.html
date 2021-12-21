@@ -12,137 +12,227 @@
 
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
-		<!--<script src="js/modernizr.custom.js"></script>-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js" integrity="sha512-CSBhVREyzHAjAFfBlIBakjoRUKp5h7VSweP0InR/pAJyptH7peuhCsqAI/snV+TwZmXZqoUklpXp6R6wMnYf5Q==" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="js/colorUtils/color.min.js"></script>
 		<script src="js/colorUtils/colorize.js"></script>
-		<script src="js/loadPosts.js"></script>
-		<script>
-			$.fn.inView = function(){
-				if(!this.length) 
-					return false;
-				var rect = this.get(0).getBoundingClientRect();
-				return (
-					// rect.top >= 100 &&
-					// rect.left >= 0 &&
-					rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) * 1.25 //&&
-					//rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-				);
-			};
-
-			// Is true false whether an array of elements are all in view
-			$.fn.allInView = function(){
-				var all = [];
-				this.forEach(function(){
-					all.push( $(this).inView() );
-				});
-				return all.indexOf(false) === -1;
-			};
-
-			$(document).ready(function(){
-				loadPosts();
-				$('#main').on('scroll', function() {
-					$('#grid-1 > li').each(function () {
-						if($('#'+this.id).inView()) {
-							$('#'+this.id).addClass( "shown" );
-						}
-					});
-					$('#grid-2 > li').each(function () {
-						if($('#'+this.id).inView()) {
-							$('#'+this.id).addClass( "shown" );
-						}
-					});
-				});
-			});
-		</script>	
-	</head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+		</head>
 	<body id="body" onload="randomize();">	
 		<nav>
 			<div>
-				<div>
-					<p>Blog</p>
-					<div></div>
-				</div>
-				<div>
-					<p>Art</p>
-					<div></div>
-				</div>
-				<div>
-					<p>About</p>
-					<div></div>
-				</div>
+				<a href="index.html">
+					<div>
+						<p>About</p>
+						<div></div>
+					</div>
+				</a>
+				<a href="art.html">
+					<div>
+						<p>Art</p>
+						<div></div>
+					</div>
+				</a>
 			</div>
 			
 		</nav>
 		<main id="main">
-			<div class="hero">
-				<h1>3omni</h1>
-				<h2>Rita Geleta's website</h2>
+			<div class="bg_black" style="width: 100%;">
+				<div class="wrapper">
+					<div class="wrapped">
+						<h2>Margarita Geleta</h2>
+						<p>The rule I follow in my everyday life is <b>"whatever you can do today, do not leave it until tomorrow"</b>. I always seek for new opportunities and I crave for learning. My interests fall in the domain of Data Science and Machine Learning - the exciting intersection of Computer Science and Statistics. </p>
+						</p>
+					</div>	
+				</div>
+				<div class="wrapper linkspace">
+					<div class="wrapped">
+						<ul>
+							<li><a href="https://es.linkedin.com/in/margarita-geleta" target="_blank" rel="noopener noreferrer">
+								<i class="fa fa-linkedin"></i> 
+								<span>Linkedin</span></a>
+							</li>
+							<li><a href="https://twitter.com/ritageleta" target="_blank" rel="noopener noreferrer">
+								<i class="fa fa-twitter"></i> 
+								<span>Twitter</span></a>
+							</li>
+							<li><a href="https://github.com/margaritageleta" target="_blank" rel="noopener noreferrer">
+								<i class="fa fa-github"></i> 
+								<span>GitHub</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>	
+				<div class="corners__wrapper">
+					<div class="corner"></div>
+					<div class="corner"></div>
+				</div>
 			</div>
 			<div class="bottom__hero">
-				<div class="bg_translucid">
-					<div class="wrapper">
-						<div class="wrapped">
-							<p>The ubiquity of data and the access to vast computational power has triggered a tectonic shift that is incrementally changing the way we communicate, work, interact, and more generally, live. <b> What decades ago was just an unattainable quixotic dream, today it is becoming a reality</b>.</p>
-						</div>
-					</div>
-				</div>
-				<div class="bg_black">
-					<div class="wrapper">
-						<div class="wrapped">
-							<p>Looking with hindsight, the achievements of <b>connectionist systems</b> are impressive but many times they lack understanding. Deep Learning is built on many heuristics, which reliably predict outcomes of experiments, yet oftentimes they are not defined mathematically and the lack of some rigorous or pellucid definitions can lead to the vision of Deep Neural Networks as <i>black boxes</i>. </p>
-							<br><p>In my view, the goal of any scientific field is to build <b>understanding, interpretability & intuition</b> behind perhaps complex, yet naturally motivated, algorithms and techniques. It may not seem so crucial, although I have noticed that this, in relatively short-term, can become the bottleneck of research. </p> 
-							<!--<blockquote>$\displaystyle{ \sum_{i=1}^N x^2 }$</blockquote>
-							<blockquote>$\begin{eqnarray} x\in \{0,1\} \end{eqnarray}$</blockquote>-->
-						</div>	
-					</div>	
-				</div>
-				<!--<div class="bg_translucid">
-					<div class="wrapper">
-						<div class="wrapped">
-							<p>I want to raise awareness & understanding - <b>research is like a Brownian motion of tiny incremental innovations</b>, until eventually we come across a real breakthrough.</p>
-							<blockquote>$\displaystyle{ \sum_{i=1}^N x^2 }$</blockquote>
-							<blockquote>$\begin{eqnarray} x\in \{0,1\} \end{eqnarray}$</blockquote>
-						</div>	
-					</div>	
-				</div>-->
-				<!--<div class="bg_black">
-					<div class="wrapper">
-						<div class="wrapped">
-							<div class="terminal-body">
-								<div class="terminal-nav">
-									<div class="terminal-menu">
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
-									<div class="terminal-name">
-										<span>3omni@Rita — ~/ — 63x7</span>
+
+				<div class="card wrapper">
+					<div class="wrapped">
+						<div class="card__about">
+							<div class="card-img__about" style="background-image: url(https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);"></div>
+							<div class="card-content-wrapper__about bg_translucid">
+								<div class="card-access wrapper__mini">
+									<div class="wrapped wrapper__mini">
+										<div class="wrapped publication">
+											<h4>Publication | 2022<span class="read-icon"><i class="fa fa-angle-double-right"></i></span></h4>
+										</div>
 									</div>
 								</div>
-								<div class="terminal-body-content">
-									
-									<p><span class="prompt">3omni\$&nbsp</span>whoami | grep species</p>  
-									<p><b>species: hypothetically human</b></p>
-
-									<p><span class="prompt">3omni\$&nbsp</span>whoami | more</p>  
-									<p><b>data scientist & enginner ~ designer ~ developer</b></p> 
-									
-									<p><span class="prompt">3omni\$&nbsp</span><span class="terminal-underscore"></span></p> 
-									
+								
+								<div class="card-content wrapper__mini">
+									<div class="wrapped wrapper">
+										<div class="wrapped">
+											<h3>Deep Variational Autoencoders for Population Genetics</h3>
+											<p>An exhaustive study of Variational Autoencoders in the context of dimensionality reduction, classification, compression, imputation and simulation of genomic data with interesting discussions about human populations.</p>
+											<div class="wrapper__mini">
+												<div class="wrapped">
+													<ul>
+														<!--<li><a href="" target="_blank" rel="noopener noreferrer">
+															<i class="fa fa-link"></i> 
+															<span>Not published yet</span></a></li>-->
+														<li><a href="https://www.youtube.com/watch?v=gX29gltHqdE" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> 
+															<span>Watch video</span></a></li>
+														<li>
+															<a href="https://upcommons.upc.edu/handle/2117/353817" target="_blank" rel="noopener noreferrer">
+																<i class="fa fa-file"></i>
+																<span>Bachelor Thesis (restricted)</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>	
-				</div>-->
-
-				<div class="masonry">
-					<ul class="grid effect-1" id="grid-1">
-					</ul>		
-					<ul class="grid effect-1" id="grid-2">
-					</ul>				  
 				</div>
+
+				<div class="card wrapper">
+					<div class="wrapped">
+						<div class="card__about">
+							<div class="card-img__about" style="background-image: url(https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);"></div>
+							<div class="card-content-wrapper__about bg_translucid">
+								<div class="card-access wrapper__mini">
+									<div class="wrapped wrapper__mini">
+										<div class="wrapped publication">
+											<h4>Publication | 2021<span class="read-icon"><i class="fa fa-angle-double-right"></i></span></h4>
+										</div>
+									</div>
+								</div>
+								
+								<div class="card-content wrapper__mini">
+									<div class="wrapped wrapper">
+										<div class="wrapped">
+											<h3>PixInWav: Residual Steganography for Hiding Pixels in Audio</h3>
+											<p>A pioneering work on hidding images within audio waveforms, showing real results retrieving images from recorded audio waves. Steganography is called “the art of hiding” - it arranges the methods that are capable of hiding information at plain sight.</p>
+											<div class="wrapper__mini">
+												<div class="wrapped">
+													<ul>
+														<li><a href="https://arxiv.org/abs/2106.09814" target="_blank" rel="noopener noreferrer">
+															<i class="fa fa-link"></i> 
+															<span>Arxiv preprint</span></a></li>
+														<!--<li><a href="" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> 
+															<span>Video unavailable</span></a></li>-->
+														<li><a href="https://github.com/margaritageleta/PixInWav" target="_blank" rel="noopener noreferrer">
+															<i class="fa fa-github"></i>
+															<span>GitHub repository</span>
+														</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+
+				<div class="card wrapper">
+					<div class="wrapped">
+						<div class="card__about">
+							<div class="card-img__about" style="background-size: 200%; background-image: url(https://images.unsplash.com/photo-1619013334699-c8310b1c137e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80);"></div>
+							<div class="card-content-wrapper__about bg_translucid">
+								<div class="card-access wrapper__mini">
+									<div class="wrapped wrapper__mini">
+										<div class="wrapped project">
+											<h4>Project | 2020<span class="read-icon"><i class="fa fa-angle-double-right"></i></span></h4>
+										</div>
+									</div>
+								</div>
+								
+								<div class="card-content wrapper__mini">
+									<div class="wrapped wrapper">
+										<div class="wrapped">
+											<h3>Forbidden Territories</h3>
+											<p>NLP multilingual model with contextual embeddings which detected sections in lyrics which had a high probability of being censored across different languages. Project presented at the Sónar+D Innovation Challenge 2020.</p>
+											<div class="wrapper__mini">
+												<div class="wrapped">
+													<ul>
+														<li><a href="https://www.youtube.com/watch?v=vQHqRl5-coc" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> 
+															<span>Watch video</span></a></li>
+														<li><a href="https://art-censorship.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+															<i class="fa fa-github"></i>
+															<span>Project website (slow load, model unavailable)</span>
+														</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+
+				<div class="card wrapper">
+					<div class="wrapped">
+						<div class="card__about">
+							<div class="card-img__about" style="background-image: url(https://images.unsplash.com/photo-1485322551133-3a4c27a9d925?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);"></div>
+							<div class="card-content-wrapper__about bg_translucid">
+								<div class="card-access wrapper__mini">
+									<div class="wrapped wrapper__mini">
+										<div class="wrapped publication">
+											<h4>Publication | 2020<span class="read-icon"><i class="fa fa-angle-double-right"></i></span></h4>
+										</div>
+									</div>
+								</div>
+								
+								<div class="card-content wrapper__mini">
+									<div class="wrapped wrapper">
+										<div class="wrapped">
+											<h3>MT-adapted datasheets for datasets: Template and repository</h3>
+											<p>We created a MT Datasheets repository, where the research community could upload the description of their datasets for Machine Translation (MT). This served as an attempt to provide reliability and transparency of the composition, collection and preprocessing steps in the datasets creation.</p>
+											<div class="wrapper__mini">
+												<div class="wrapped">
+													<ul>
+														<li><a href="https://arxiv.org/abs/2005.13156" target="_blank" rel="noopener noreferrer">
+															<i class="fa fa-link"></i> 
+															<span>Arxiv preprint</span></a></li>
+														<li><a href="https://margaritageleta.github.io/TAED-bias/" target="_blank" rel="noopener noreferrer">
+															<i class="fa fa-github"></i>
+															<span>Project website</span>
+														</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+
 			</div>	
 		</main>
 	</body>
