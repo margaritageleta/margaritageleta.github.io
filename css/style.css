@@ -441,7 +441,13 @@ blockquote {
 }
 
 .artfiles {
+	z-index: 10;
 	transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 }
 
 img {
@@ -744,9 +750,7 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
 .card__about:hover {
 	transform: translateY(-5px);
 }
-.artfiles {
-	z-index: 10;
-}
+
 .artfiles2 {
 	background-image: url(../img/artfile6.png);
 	position: absolute;
@@ -805,6 +809,8 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
 	.artfiles {
 		display: grid;
 		grid-template-columns: 1fr;
+		align-self: center;
+		justify-self: center;
 	}
 
 	.artfiles img {

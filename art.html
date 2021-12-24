@@ -19,7 +19,18 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-		</head>
+        
+        <script>
+            //image objects
+            var imageEls = document.getElementsByTagName("img");
+            //Iterating
+            for(var i=0;i<imageEls.length;i++){
+               imageEls[i].title=imageEls[i].alt;
+               //OR
+               //imageEls[i].title="Title of your choice";
+            }
+        </script>
+    </head>
 	<body id="body" onload="randomize();">	
 		<nav>
 			<div>
@@ -45,7 +56,7 @@
 						<h2>Art portfolio</h2>
 						<p>Her art has been described as <b>beautifully singular and mesmerizing</b>, abiding in the spaces between order and chaos, wisdom and madness, life and death. Characters are set in fatalistic conditions, each one is dotted with emotions and memories that evoke their thought-provoking, deceptively tragic, but at the same time magic, life stories.</p>
 						</p>
-                        <hr>
+                        <span style="height: 10px; width: 100%;"></span>
 					</div>	
 				</div>
 				<div class="corners__wrapper">
@@ -63,27 +74,70 @@
                             <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890f30c1-be3d-438a-baf5-7f7cc70399f1/dcomhur-98d6c510-95f1-4fc7-8aa4-c5f7c5770c53.jpg/v1/fill/w_1024,h_1024,q_75,strp/robots_for_freedom__by_margaritageleta_dcomhur-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzg5MGYzMGMxLWJlM2QtNDM4YS1iYWY1LTdmN2NjNzAzOTlmMVwvZGNvbWh1ci05OGQ2YzUxMC05NWYxLTRmYzctOGFhNC1jNWY3YzU3NzBjNTMuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.InV6IeEls5BWJpLiVvOq21E0rkoP-pLNI7YG1fB4ck8" 
                             class="artfile" width="auto" height="370" alt="artfile02">
 
-                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890f30c1-be3d-438a-baf5-7f7cc70399f1/dcomh73-01d96e00-a493-496e-b078-acf94699fa96.jpg/v1/fill/w_1024,h_1366,q_75,strp/trees__paths_and_flowers_by_margaritageleta_dcomh73-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTM2NiIsInBhdGgiOiJcL2ZcLzg5MGYzMGMxLWJlM2QtNDM4YS1iYWY1LTdmN2NjNzAzOTlmMVwvZGNvbWg3My0wMWQ5NmUwMC1hNDkzLTQ5NmUtYjA3OC1hY2Y5NDY5OWZhOTYuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.dnFK9knsYLuO43xctrtw-PNfj5eLELNPHPwXbjK0aas" 
+                            <img src="img/martian.png" 
+                            class="artfile" width="auto" height="370" alt="artfile06">
+
+                            <img src="img/artfileS.jpg" 
                             class="artfile" width="auto" height="370" alt="artfile03">
 
                             <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890f30c1-be3d-438a-baf5-7f7cc70399f1/dcomuni-02bfb08f-080a-427a-b111-09e505dc43c7.jpg/v1/fill/w_1024,h_744,q_75,strp/massandra_by_margaritageleta_dcomuni-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzQ0IiwicGF0aCI6IlwvZlwvODkwZjMwYzEtYmUzZC00MzhhLWJhZjUtN2Y3Y2M3MDM5OWYxXC9kY29tdW5pLTAyYmZiMDhmLTA4MGEtNDI3YS1iMTExLTA5ZTUwNWRjNDNjNy5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.fj4hAaclAv9LWKDpAMbsHs7eDLYGO2MGTHJAFDyTPHo" 
-                            class="artfile" width="auto" height="370" alt="artfile04">
+                            class="artfile" width="auto" height="540" alt="artfile04">
 
+                            <img src="img/artfileA.jpg" 
+                            class="artfile" width="auto" height="540" alt="artfile03">
+
+                            <img src="img/artfileC.jpg" 
+                            class="artfile" width="auto" height="540" alt="artfile03">
+                            
                             <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890f30c1-be3d-438a-baf5-7f7cc70399f1/dewsf5z-e9a54ce9-15eb-4a4e-a050-72a82f0b419b.jpg/v1/fill/w_1017,h_786,q_70,strp/the_zoo_of_nightmares_by_margaritageleta_dewsf5z-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzkyIiwicGF0aCI6IlwvZlwvODkwZjMwYzEtYmUzZC00MzhhLWJhZjUtN2Y3Y2M3MDM5OWYxXC9kZXdzZjV6LWU5YTU0Y2U5LTE1ZWItNGE0ZS1hMDUwLTcyYTgyZjBiNDE5Yi5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.esTAwTFCFk4ucL5I9rLNIxlvXjW-UqBoLwmRNFKcQIY"
-                            class="artfile" width="auto" height="370" alt="artfile05">
+                            class="artfile" width="auto" height="540" alt="artfile05">
 
-                            <img src="img/martian.jpg" 
-                            class="artfile" width="auto" height="370" alt="artfile06">
+                            <img src="img/artfileQ.jpg" 
+                            class="artfile" width="auto" height="370" alt="artfile03">
+
+                            <img src="img/artfileM.jpg" 
+                            class="artfile" width="auto" height="370" alt="artfile03">
+
+                            <img src="img/artfileB.jpg" 
+                            class="artfile" width="auto" height="370" alt="artfile03">
 
                             <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890f30c1-be3d-438a-baf5-7f7cc70399f1/dewsf9f-90b8fd60-dc8f-455b-addf-4c33949bc6c4.jpg/v1/fill/w_1024,h_727,q_75,strp/the_world_s_plug_by_margaritageleta_dewsf9f-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzI3IiwicGF0aCI6IlwvZlwvODkwZjMwYzEtYmUzZC00MzhhLWJhZjUtN2Y3Y2M3MDM5OWYxXC9kZXdzZjlmLTkwYjhmZDYwLWRjOGYtNDU1Yi1hZGRmLTRjMzM5NDliYzZjNC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.fJcEldbdYHWXPxmY4Hr_K1U_YkrJx57k2z2mw5n7iMg" 
-                            class="artfile" width="auto" height="370" alt="artfile07">
+                            class="artfile" width="auto" height="540" alt="artfile07">
+                            
+                            <img src="img/artfileN.jpg" 
+                            class="artfile" width="auto" height="370" alt="artfile03">
+
+                            <img src="img/artfileJ.jpg" 
+                            class="artfile" width="auto" height="370" alt="artfile03">
+
+                            <img src="img/artfileH.jpg" 
+                            class="artfile" width="auto" height="540" alt="artfile03">
+
+                            <img src="img/artfileK.jpg" 
+                            class="artfile" width="auto" height="540" alt="artfile03">
+
+                            <img src="img/artfileL.jpg" 
+                            class="artfile" width="auto" height="540" alt="artfile03">
+                            
+                            <img src="img/artfileO.jpg" 
+                            class="artfile" width="auto" height="540" alt="artfile03">
+
+                            <img src="img/artfileP.jpg" 
+                            class="artfile" width="auto" height="540" alt="artfile03">
+
+                            
+                            
+
+                            
+                            
+                            
 
                         </div>
                         <div class="artfiles2"></div>
                     </div>
                     
                 </div>
-			</div>	
+			</div>
 		</main>
 	</body>
 </html>
