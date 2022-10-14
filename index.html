@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
-		<title>3omni @ your device</title>
+		<title>3omni</title>
 		<script src="js/loadTags.js"></script>
 		<script id="head">
 			loadMetaTags();
@@ -11,65 +11,87 @@
 		</script>
 
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+		<script src="https://kit.fontawesome.com/ae7c3de316.js" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js" integrity="sha512-CSBhVREyzHAjAFfBlIBakjoRUKp5h7VSweP0InR/pAJyptH7peuhCsqAI/snV+TwZmXZqoUklpXp6R6wMnYf5Q==" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="js/colorUtils/color.min.js"></script>
 		<script src="js/colorUtils/colorize.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-		</head>
-	<body id="body" onload="randomize();">	
+		<!--<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+	</head>
+	<body id="body"> <!--onload="randomize();"-->	
 		<nav>
-			<div>
-				<a href="index.html">
-					<div>
-						<p>About</p>
-						<div></div>
-					</div>
-				</a>
-				<a href="art.html">
-					<div>
-						<p>Art</p>
-						<div></div>
-					</div>
-				</a>
+			<div class="bio" style="display: grid !important;">
+				<div class="wrapper">
+					<div class="wrapped">
+						<h2><a href="index.html" style="color: black !important;">Margarita Geleta</a></h2>
+						<div class="wrapper">
+							<div id="bio-image" class="wrapped"></div>
+						</div>
+						<p><b>TL;DR</b>: I am a CS PhD student at <a href="http://www.eecs.berkeley.edu/">UC Berkeley</a>. My main research interest is generative modelling. </p>
+						<br>
+						<p>I worked at <a href="https://www.amazon.science/author/margarita-geleta">Amazon</a> as an Applied Scientist in HIT, and at <a href="https://profiles.stanford.edu/intranet/margarita-geleta?releaseVersion=9.9.1">Stanford</a> as a Research Assistant in the Biomedical Data Science department.</p> 
+						<br>
+						<p>I did my undergrad at <a href="https://www.upc.edu/en">UPC BarcelonaTech</a> and researched in the <a href="https://imatge.upc.edu/web/biblio?f%5Bauthor%5D=1540">Image UPC</a> group. Before transferring to Berkeley, I started grad school at <a href="https://uci.edu/">UC Irvine</a> where I worked in the <a href="https://etad.calit2.uci.edu/lab-members/graduate-researchers/">ETAD</a> lab and collaborated with the <a href="https://ucinlp.github.io/">UCI NLP</a> group.
+						<br>
+						<div class="bio-linkspace">
+							<div>
+									<ul>
+										<li><a href="https://es.linkedin.com/in/margarita-geleta" target="_blank" rel="noopener noreferrer">
+											<i class="fa fa-linkedin"></i> 
+											<span>Linkedin</span></a>
+										</li>
+										<li><a href="https://twitter.com/ritageleta" target="_blank" rel="noopener noreferrer">
+											<i class="fa fa-twitter"></i> 
+											<span>Twitter</span></a>
+										</li>
+										<li><a href="https://github.com/margaritageleta" target="_blank" rel="noopener noreferrer">
+											<i class="fa fa-github"></i> 
+											<span>GitHub</span></a>
+										</li>
+										<li><a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/margaritageleta/cv/master/resume22.pdf" target="_blank" rel="noopener noreferrer">
+											<i class="fa fa-file"></i>
+											<span>Resume</span>
+										</a></li>
+										<li><a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/margaritageleta/cv/master/CV.pdf" target="_blank" rel="noopener noreferrer">
+											<i class="fa fa-file"></i>
+											<span>CV</span>
+										</a></li>
+									</ul>
+							</div>	
+						</div>
+					
+						<!--<p>The rule I follow in my everyday life is <b>"whatever you can do today, do not leave it until tomorrow"</b>. I always seek for new opportunities and I crave for learning. My interests fall in the domain of Data Science and Machine Learning - the exciting intersection of Computer Science and Statistics. </p>-->
+						</p>
+					</div>	
+				</div>
 			</div>
 			
 		</nav>
 		<main id="main">
-			<div class="bg_black" style="width: 100%;">
-				<div class="wrapper">
-					<div class="wrapped">
-						<h2>Margarita Geleta</h2>
-						<p>The rule I follow in my everyday life is <b>"whatever you can do today, do not leave it until tomorrow"</b>. I always seek for new opportunities and I crave for learning. My interests fall in the domain of Data Science and Machine Learning - the exciting intersection of Computer Science and Statistics. </p>
-						</p>
-					</div>	
-				</div>
+			<div class="bg_white" style="width: 100%;">
+				
 				<div class="wrapper linkspace">
 					<div class="wrapped">
 						<ul>
-							<li><a href="https://es.linkedin.com/in/margarita-geleta" target="_blank" rel="noopener noreferrer">
-								<i class="fa fa-linkedin"></i> 
-								<span>Linkedin</span></a>
+							<li><a href="index.html">
+								<i class="fa fa-bookmark"></i> 
+								<span>Research</span></a>
 							</li>
-							<li><a href="https://twitter.com/ritageleta" target="_blank" rel="noopener noreferrer">
-								<i class="fa fa-twitter"></i> 
-								<span>Twitter</span></a>
+							<li><a href="projects.html">
+								<i class="fa fa-heart"></i> 
+								<span>Projects</span></a>
 							</li>
-							<li><a href="https://github.com/margaritageleta" target="_blank" rel="noopener noreferrer">
-								<i class="fa fa-github"></i> 
-								<span>GitHub</span></a>
+							<li><a href="art.html">
+								<i class="fa fa-palette"></i> 
+								<span>Art</span></a>
 							</li>
-							<li><a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/margaritageleta/cv/master/resume22.pdf" target="_blank" rel="noopener noreferrer">
-								<i class="fa fa-file"></i>
-								<span>Resume</span>
-							</a></li>
-							<li><a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/margaritageleta/cv/master/CV.pdf" target="_blank" rel="noopener noreferrer">
-								<i class="fa fa-file"></i>
-								<span>CV</span>
-							</a></li>
+							<li><a href="about.html">
+								<i class="fa fa-question"></i> 
+								<span>More about me</span></a>
+							</li>
 						</ul>
 					</div>
 				</div>	
@@ -79,31 +101,67 @@
 				</div>
 			</div>
 			<div class="bottom__hero">
+				<div class="ghost-nav"></div>
 
 				<div class="card wrapper">
 					<div class="wrapped">
 						<div class="card__about">
-							<div class="card-img__about" style="background-image: url(https://images.unsplash.com/reserve/d1Ntvq9mSVmV0RcnWN1Y_23rd%20Studios%20Photography%20Boulder%20Colorado.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);"></div>
+							<div class="card-img__about" style="background-image: url(https://ucinlp.github.io/assets/logo.png);"></div>
 							<div class="card-content-wrapper__about bg_translucid">
-								<div class="card-access wrapper__mini">
-									<div class="wrapped wrapper__mini">
-										<div class="wrapped publication">
-											<h4>Publication @ EMBC | 2022<span class="read-icon"><i class="fa fa-angle-double-right"></i></span></h4>
-										</div>
-									</div>
-								</div>
 								
 								<div class="card-content wrapper__mini">
 									<div class="wrapped wrapper">
 										<div class="wrapped">
-											<h3>Generative Moment Matching Networks for Genotype Simulation</h3>
-											<p>We explore the use of Generative Moment Matching Networks (GMMNs) for SNP simulation and also as a useful tool for privacy-preserving data sharing mechanism for modern day biobanks, and most importantly, a way to partially mitigate population bias within datasets.</p>
+											<h3><i>Maestro</i>: Multi-level Attack and Defense Simulation Environment for AI Education and Research</h3>
+											<p><i><b>Margarita Geleta</b>, Jiacen Xu, Manikanta Loya, Junlin Wang, Sameer Singh, Zhou Li and Sergio Gago Masague</i>&nbsp;&nbsp; <b class="way-cool-conf">[Under Review]</b></p>
+											<p>Maintainer of the <i>Maestro</i> leaderboard and tester of the framework, providing a service for cybersecurity educational purposes in the domain of adversarial attacks and defenses.</p>
 											<div class="wrapper__mini">
 												<div class="wrapped">
 													<ul>
-														<li><a href="https://www.biorxiv.org/content/10.1101/2022.04.14.488350v1.abstract" target="_blank" rel="noopener noreferrer">
+														<li><a href="https://github.com/ucinlp/maestro-leaderboard" target="_blank" rel="noopener noreferrer">
+															<i class="fa fa-github"></i> 
+															<span>Leaderboard repository at UCI NLP Group</span></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+
+				<div class="card wrapper">
+					<div class="wrapped">
+						<div class="card__about card__highlight">
+							<div class="card-img__about" style="background-image: url(https://pbs.twimg.com/media/FJ1U1EYVkAIzvdF?format=jpg&name=large);"></div>
+							<div class="card-content-wrapper__about bg_translucid">
+								
+								
+								<div class="card-content wrapper__mini">
+									<div class="wrapped wrapper">
+										<div class="wrapped">
+											<h3><a href="projects/steganography.html">PixInWav: Residual Steganography for Hiding Pixels in Audio</a></h3>
+											<p><i><b>Margarita Geleta</b>, Cristina Punti, Kevin McGuinness, Jordi Pons, Cristian Canton, Xavier Giro-i-Nieto</i>&nbsp;&nbsp; <b class="way-cool-conf">[ICASSP 2022]</b> & <b class="cool-post">[WiCV/CVPR 2021]</b></p>
+											
+											<p>A pioneering work on hidding images within audio waveforms, showing real results retrieving images from recorded audio waves. Steganography is called “the art of hiding” - it arranges the methods that are capable of hiding information at plain sight.</p>
+											<div class="wrapper__mini">
+												<div class="wrapped">
+													<ul>
+														<li><a href="https://ieeexplore.ieee.org/document/9746191" target="_blank" rel="noopener noreferrer">
 															<i class="fa fa-link"></i> 
-															<span>Full-length paper at bioArxiv</span></a></li>
+															<span>Full-length paper</span></a>
+
+															<a href="https://arxiv.org/abs/2106.09814" target="_blank" rel="noopener noreferrer">
+																<i class="fa fa-link"></i> 
+																<span>Arxiv preprint</span></a>
+														
+															<a href="https://github.com/margaritageleta/PixInWav" target="_blank" rel="noopener noreferrer">
+																<i class="fa fa-github"></i>
+																<span>GitHub repository</span>
+															</a>
+													</li>
 													</ul>
 												</div>
 											</div>
@@ -118,30 +176,51 @@
 				<div class="card wrapper">
 					<div class="wrapped">
 						<div class="card__about">
-							<div class="card-img__about" style="background-image: url(https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);"></div>
+							<div class="card-img__about" style="background-image: url(https://www.biorxiv.org/content/biorxiv/early/2022/04/14/2022.04.14.488350/F1.medium.gif);"></div>
 							<div class="card-content-wrapper__about bg_translucid">
-								<div class="card-access wrapper__mini">
-									<div class="wrapped wrapper__mini">
-										<div class="wrapped publication">
-											<h4>Abstract @ ASHG | 2022<span class="read-icon"><i class="fa fa-angle-double-right"></i></span></h4>
+
+								<div class="card-content wrapper__mini">
+									<div class="wrapped wrapper">
+										<div class="wrapped">
+											<h3>Generative Moment Matching Networks for Genotype Simulation</h3>
+											<p><i>Maria Perera, Daniel Mas Montserrat, Míriam Barrabés, <b>Margarita Geleta</b>, Xavier Giró-i-Nieto, Alexander G. Ioannidis</i>&nbsp;&nbsp;<b class="cool-conf">[EMBC 2022]</b></p>
+											<p>We explore the use of Generative Moment Matching Networks (GMMNs) for SNP simulation and also as a useful tool for privacy-preserving data sharing mechanism for modern day biobanks, and most importantly, a way to partially mitigate population bias within datasets.</p>
+											<div class="wrapper__mini">
+												<div class="wrapped">
+													<ul>
+														<li><a href="https://www.biorxiv.org/content/10.1101/2022.04.14.488350v1.abstract" target="_blank" rel="noopener noreferrer">
+															<i class="fa fa-link"></i> 
+															<span>Full-length paper at bioArxiv</span></a></li>
+													</ul>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 								
+							</div>
+						</div>
+					</div>	
+				</div>
+
+				<div class="card wrapper">
+					<div class="wrapped">
+						<div class="card__about">
+							<div class="card-img__about" style="background-image: url(https://pbs.twimg.com/media/FHP7K3NXMAIEnqD?format=jpg&name=large);"></div>
+							<div class="card-content-wrapper__about bg_translucid">
 								<div class="card-content wrapper__mini">
 									<div class="wrapped wrapper">
 										<div class="wrapped">
 											<h3>Deep Variational Autoencoders for Population Genetics</h3>
+											<p><i><b>Margarita Geleta</b>, Daniel Mas Montserrat, Carlos D. Bustamante, Xavier Giró-i-Nieto, Alexander G. Ioannidis</i>&nbsp;&nbsp;<b class="cool-post">[ASHG 2021]</b> & <b class="cool-post">[DLBCN 2021]</b></p>
+											
 											<p>An exhaustive study of Variational Autoencoders in the context of dimensionality reduction, classification, compression, imputation and simulation of genomic data with interesting discussions about human populations.</p>
 											<div class="wrapper__mini">
 												<div class="wrapped">
 													<ul>
-														<!--<li><a href="" target="_blank" rel="noopener noreferrer">
-															<i class="fa fa-link"></i> 
-															<span>Not published yet</span></a></li>-->
 														<li><a href="https://www.youtube.com/watch?v=gX29gltHqdE" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> 
-															<span>Watch video</span></a></li>
-														<li>
+															<span>Watch video</span></a>
+														
 															<a href="https://upcommons.upc.edu/handle/2117/353817" target="_blank" rel="noopener noreferrer">
 																<i class="fa fa-file"></i>
 																<span>Bachelor Thesis (restricted)</span>
@@ -157,46 +236,10 @@
 						</div>
 					</div>	
 				</div>
+<!--
 
 
-
-				<div class="card wrapper">
-					<div class="wrapped">
-						<div class="card__about">
-							<div class="card-img__about" style="background-image: url(https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);"></div>
-							<div class="card-content-wrapper__about bg_translucid">
-								<div class="card-access wrapper__mini">
-									<div class="wrapped wrapper__mini">
-										<div class="wrapped project">
-											<h4>Project @ UCI | 2022<span class="read-icon"><i class="fa fa-angle-double-right"></i></span></h4>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card-content wrapper__mini">
-									<div class="wrapped wrapper">
-										<div class="wrapped">
-											<h3>MAESTRO: Multi-level Attack and Defense Simulation Environment for AI Education and Research</h3>
-											<p>Maintainer of the MAESTRO leaderboard and tester of the framework, providing a service for cybersecurity educational purposes in the domain of adversarial attacks and defenses.</p>
-											<div class="wrapper__mini">
-												<div class="wrapped">
-													<ul>
-														<li><a href="https://etad.calit2.uci.edu/lab-members/graduate-researchers/" target="_blank" rel="noopener noreferrer">
-															<i class="fa fa-link"></i> 
-															<span>My Lab profile</span></a></li>
-														<li><a href="https://github.com/ucinlp/maestro-leaderboard" target="_blank" rel="noopener noreferrer">
-															<i class="fa fa-github"></i> 
-															<span>Leaderboard repository at UCI NLP Group</span></a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>	
-				</div>
+				
 
 				<div class="card wrapper">
 					<div class="wrapped">
@@ -274,50 +317,13 @@
 					</div>	
 				</div>
 
-				<div class="card wrapper">
-					<div class="wrapped">
-						<div class="card__about">
-							<div class="card-img__about" style="background-image: url(https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);"></div>
-							<div class="card-content-wrapper__about bg_translucid">
-								<div class="card-access wrapper__mini">
-									<div class="wrapped wrapper__mini">
-										<div class="wrapped publication">
-											<h4>Publication @ ICASSP | 2021<span class="read-icon"><i class="fa fa-angle-double-right"></i></span></h4>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card-content wrapper__mini">
-									<div class="wrapped wrapper">
-										<div class="wrapped">
-											<h3>PixInWav: Residual Steganography for Hiding Pixels in Audio</h3>
-											<p>A pioneering work on hidding images within audio waveforms, showing real results retrieving images from recorded audio waves. Steganography is called “the art of hiding” - it arranges the methods that are capable of hiding information at plain sight.</p>
-											<div class="wrapper__mini">
-												<div class="wrapped">
-													<ul>
-														<li><a href="https://arxiv.org/abs/2106.09814" target="_blank" rel="noopener noreferrer">
-															<i class="fa fa-link"></i> 
-															<span>Arxiv preprint</span></a></li>
-														<!--<li><a href="" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> 
-															<span>Video unavailable</span></a></li>-->
-														<li><a href="https://ieeexplore.ieee.org/document/9746191" target="_blank" rel="noopener noreferrer">
-															<i class="fa fa-link"></i> 
-															<span>Full-length paper</span></a></li>
-															
-														<li><a href="https://github.com/margaritageleta/PixInWav" target="_blank" rel="noopener noreferrer">
-															<i class="fa fa-github"></i>
-															<span>GitHub repository</span>
-														</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>	
-				</div>
+			-->
+
+
+
+				
+
+				<!--
 
 				<div class="card wrapper">
 					<div class="wrapped">
@@ -356,35 +362,28 @@
 						</div>
 					</div>	
 				</div>
+			-->
 
 				<div class="card wrapper">
 					<div class="wrapped">
 						<div class="card__about">
 							<div class="card-img__about" style="background-image: url(https://images.unsplash.com/photo-1485322551133-3a4c27a9d925?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);"></div>
 							<div class="card-content-wrapper__about bg_translucid">
-								<div class="card-access wrapper__mini">
-									<div class="wrapped wrapper__mini">
-										<div class="wrapped publication">
-											<h4>Publication @ LREV | 2020<span class="read-icon"><i class="fa fa-angle-double-right"></i></span></h4>
-										</div>
-									</div>
-								</div>
+								
 								
 								<div class="card-content wrapper__mini">
 									<div class="wrapped wrapper">
 										<div class="wrapped">
-											<h3>MT-adapted datasheets for datasets: Template and repository</h3>
+											<h3><a href="https://margaritageleta.github.io/TAED-bias/" target="_blank" rel="noopener noreferrer">MT-adapted datasheets for datasets: Template and repository</a></h3>
+											<p><i>Marta R. Costa-jussà, Roger Creus, Oriol Domingo, Albert Domínguez, Miquel Escobar, Cayetana López, Marina Garcia, <b>Margarita Geleta</b></i>&nbsp;&nbsp;<b class="cool-conf">[LREV 2020]</b></p>
 											<p>We created a MT Datasheets repository, where the research community could upload the description of their datasets for Machine Translation (MT). This served as an attempt to provide reliability and transparency of the composition, collection and preprocessing steps in the datasets creation.</p>
 											<div class="wrapper__mini">
 												<div class="wrapped">
 													<ul>
 														<li><a href="https://arxiv.org/abs/2005.13156" target="_blank" rel="noopener noreferrer">
 															<i class="fa fa-link"></i> 
-															<span>Arxiv preprint</span></a></li>
-														<li><a href="https://margaritageleta.github.io/TAED-bias/" target="_blank" rel="noopener noreferrer">
-															<i class="fa fa-github"></i>
-															<span>Project website</span>
-														</a></li>
+															<span>Arxiv preprint</span></a>
+														</li>
 													</ul>
 												</div>
 											</div>
