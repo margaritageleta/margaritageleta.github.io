@@ -1135,3 +1135,7 @@ iframe {
 	grid-template-columns: [ini] 1fr [mid] 1fr [end];
 	grid-template-rows: 1fr;
 }
+
+.card-content span {
+	font-size: 1em;
+}
