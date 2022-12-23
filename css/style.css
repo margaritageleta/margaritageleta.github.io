@@ -1139,3 +1139,23 @@ iframe {
 .card-content span {
 	font-size: 1em;
 }
+
+#map { 
+	height: 50vh;
+	width: 100%; 
+}
+
+#map * {
+	box-shadow: none;
+	
+}
+
+.leaflet-popup-content-wrapper {
+	background-color: rgba(255,255,255,0.4);
+}
+
+.leaflet-popup-content-wrapper h5 {
+	margin: -10px;
+	text-align: center;
+	font-size: 10px;
+}
