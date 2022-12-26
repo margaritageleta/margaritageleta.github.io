@@ -385,12 +385,12 @@
 				"Geneva": {
 					"lat": 46.2017559,
 					"lng": 6.1466014,
-					"to": []
+					"to": ["Laussane"]
 				},
 				"Lausanne": {
 					"lat": 46.5218269,
 					"lng": 6.6327025,
-					"to": ["Milan"]
+					"to": ["Milan", "Geneva"]
 				},
 				"Katy Rybackie": {
 					"lat": 54.3399675,
@@ -425,7 +425,7 @@
 				"Kiev": {
 					"lat": 50.4500336,
 					"lng": 30.5241361,
-					"to": []
+					"to": ["Skaryszew"]
 				},
 				"Zaporozhya": {
 					"lat": 47.838800,
@@ -495,7 +495,7 @@
 				"Paris": {
 					"lat": 48.8588897,
 					"lng": 2.320041,
-					"to": ["Barcelona"]
+					"to": ["Barcelona", "Los Angeles"]
 				},
 				"Jones Beach": {
 					"lat": 40.610615,
@@ -551,7 +551,43 @@
 					"lat": 50.1106444,
 					"lng": 8.6820917,
 					"to": []
+				},
+				"Salou": {
+					"lat": 41.0768193,
+					"lng": 1.1440411,
+					"to": ["Barcelona"]
+				},
+				"Hospitalet de Llobregat": {
+					"lat": 41.35959243774414,
+					"lng": 2.099574089050293,
+					"to": ["Barcelona"]
+				},
+				"Panta de Susqueda": {
+					"lat": 41.9783501,
+					"lng": 2.5181604,
+					"to": ["Lloret de Mar"]
+				},
+				"Neuzelle": {
+					"lat": 52.0908428,
+					"lng": 14.6493003,
+					"to": ["Lausanne", "Warsaw"]
+				},
+				"Zyrzyn": {
+					"lat": 51.498164,
+					"lng": 22.0938269,
+					"to": ["Skaryszew"]
+				},
+				"Skaryszew": {
+					"lat": 51.3105682,
+					"lng": 21.2523856,
+					"to": ["Warsaw"]
+				},
+				"Warsaw": {
+					"lat": 52.2319581,
+					"lng": 21.0067249,
+					"to": ["Neuzelle"]
 				}
+
 			};
 			for (const [name, marker] of Object.entries(markers)) {
 				L.circleMarker( [marker.lat, marker.lng],{
