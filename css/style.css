@@ -829,7 +829,7 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
     grid-template-columns: 250px 1fr;
     grid-template-rows: 1fr;
 	box-shadow: 0 0 40px rgb(5 5 38 / 35%);
-	border-radius: 20px;
+	border-radius: 0px;
 	overflow: hidden;
 	background-color: ghostwhite;
 	/*transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);*/
