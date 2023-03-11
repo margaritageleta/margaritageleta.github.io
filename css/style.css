@@ -920,11 +920,22 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
 	}
 	nav > div div > p {
 		margin: 0;
-		padding: 15px 0;
+		padding: 5px 0;
 	}
 
-	nav > div div > div {
-		display: none;
+	.bio-linkspace > div {
+		width: 100%;
+	}
+
+	.bio-linkspace li {
+		width: max-content !important;
+	}
+
+	nav > div div > div > ul {
+		flex-direction: row;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.artfiles {
