@@ -62,7 +62,7 @@ html, body, p{
 	/*font-family: 'Quicksand', sans-serif;*/
 	font-family:'Lato', sans-serif;
     color: var(--text-color);
-    font-size: large;
+    font-size: x-large;
     text-align: left;
     text-align: -moz-left;
     overflow: scroll;
