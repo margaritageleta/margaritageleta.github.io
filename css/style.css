@@ -47,7 +47,8 @@
     --terminal-prompt-git: #b0ad41;
 	--text-color: rgb(240,240,220);
 	--neon-vampire: #aaffdf;
-	--background-dark: #24292e;
+	--background-dark: #1c1c1c;/* #24292e;*/
+	--background-dark-translucid: #1c1c1cbd;
 }
 
 /*Define no margin and no padding to html*/
@@ -75,7 +76,7 @@ html {
 }
 
 html * {
-	color: black;
+	color: white;
 }
 
 body {
@@ -84,7 +85,7 @@ body {
 	display: grid;
 	grid-template-columns: 43vh 1fr;
 	grid-template-rows: 1fr;
-	background-color: ghostwhite;
+	/*background-color: ghostwhite;*/
 	/*background: linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%, 0) 55%), linear-gradient(17deg, hsla(52, 67.53%, 25.35%, 1) 0%, hsla(52, 67.53%, 25.35%, 0) 70%), linear-gradient(206deg, hsla(30, 70.13%, 12.43%, 1) 10%, hsla(30, 70.13%, 12.43%, 0) 80%), linear-gradient(105deg, hsla(161, 63.27%, 32.84%, 1) 30%, hsla(161, 63.27%, 32.84%, 0) 80%), linear-gradient(40deg, hsla(4, 72.8%, 38.04%, 1) 100%, hsla(4, 72.8%, 38.04%, 0) 0%);*/
 	/*background: linear-gradient(296deg, hsla(354, 79.67%, 51.1%, 1) 0%, hsla(354, 79.67%, 51.1%, 0) 55%), linear-gradient(306deg, hsla(57, 89.7%, 38.21%, 1) 0%, hsla(57, 89.7%, 38.21%, 0) 70%), linear-gradient(37deg, hsla(172, 98.14%, 31.15%, 1) 10%, hsla(172, 98.14%, 31.15%, 0) 80%), linear-gradient(315deg, hsla(328, 98.88%, 45.52%, 1) 30%, hsla(328, 98.88%, 45.52%, 0) 80%), linear-gradient(183deg, hsla(314, 62%, 13.47%, 1) 100%, hsla(314, 62%, 13.47%, 0) 0%);*/
 
@@ -106,41 +107,52 @@ background:
 */
 
 nav {
-	width: 100%;
-	height: 100vh;
-    /*background-color: #24292e;*/
-	background-color: white;
-	box-shadow: 0 0 40px rgba(5,5,38,0.38);
-	z-index: 200;
-
+	width: 43vh;
+    height: 100vh;
+    /* background-color: #24292e; */
+    background-color: var(--background-dark-translucid);
+    box-shadow: 0 0 40px rgba(5,5,38,0.38);
+    z-index: 200;
     transition: all 4s ease-out;
     transition: all 0.25s ease-in;
     display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-
-	overflow: scroll;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: scroll;
+    position: absolute;
 
     /*position: fixed;*/
 }
 
 nav * {
-	color:#000000
+	color:#ffffff
 	
 }
 
+.top__hero {
+	width: calc(100% + 43vh);
+    height: 30vh;
+    background: url(https://pbs.twimg.com/media/GHAbDQ2bsAEO2Kc?format=jpg&name=large);
+    position: relative;
+    left: -43vh;
+    z-index: -200;
+    background-size: cover;
+    background-position: 440px;
+}
+
 #bio-image {
-	width: 20vh;
-	height: 20vh;
+	width: 23vh;
+	height: 23vh;
 	background-color: ghostwhite;
-	margin-bottom: 20px;
-	background-image: url("https://avatars.githubusercontent.com/u/31892476?v=4");
+	margin-top: calc(2.5vh - 10px);
+	margin-bottom: calc(2.5vh + 10px);
+	background-image: url("https://pbs.twimg.com/profile_images/1761286775249764352/d0GZHlOl_400x400.jpg");
 	background-size: contain;
 }
 
 a, .card-content a span {
 	font-weight: bold;
-	color: rgb(57, 108, 185) !important;
+	color: var(--terminal-body-text); /* rgb(57, 108, 185) !important;*/
 }
 
 .bio br, .article br {
@@ -155,7 +167,6 @@ a, .card-content a span {
 	width: 100%;
 	height: max-content;
 	display: flex;
-	justify-content: flex-start;
 }
 
 /*nav > div {
@@ -205,7 +216,6 @@ main {
 
 	width: 100%;
 	height: 100vh;
-	overflow: scroll;
 }
 
 main > div:first-child {
@@ -230,6 +240,17 @@ main h1 {
 
 .article ul {
 	background-color: seashell;
+}
+
+nav h2 {
+	margin: 0;
+    padding: 9px 0;
+    font-size: larger;
+    background-color: var(--background-dark);
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
 }
 
 main h2 {
@@ -266,13 +287,13 @@ main h3, main h4 {
 .bg_black {
 	height: max-content;
 	bottom: 0;
-	background-color: #24292e;
+	background-color: var(--background-dark);
 }
 
 .bg_white {
 	height: max-content;
 	bottom: 0;
-	background-color: white;
+	background-color: var(--background-dark-translucid);
 }
 
 .bg_black_translucid {
@@ -306,13 +327,17 @@ main h3, main h4 {
 }
 
 .ghost-nav {
-	width: 100%;
-	height: 36px;
+	height: 100%;
+	width: 43vh;
 	/*background-color: red;*/
 }
 
 .bottom__hero .card:first-child {
 	grid-template-rows: 20px [ini] 1fr [end] 10px;
+}
+
+.bottom__hero .card:first-of-type {
+	margin-top: 1vh !important;
 }
 
 .bottom__hero .card:last-child {
@@ -331,9 +356,13 @@ main h3, main h4 {
 	font-size: 0.95em;
 }
 
-.wrapped p, .wrapped span, .wrapped li {
+.wrapped p, .wrapped span {
 	width: 100%;
 	/*white-space: pre-line;*/
+	font-size: 0.75em;
+}
+
+.wrapped li {
 	font-size: 0.75em;
 }
 
@@ -349,8 +378,8 @@ ul {
 	list-style-type: none;
 	display: flex;
 	justify-content: flex-start;
-	flex-direction: column;
-	align-items: flex-start;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .linkspace ul {
@@ -502,13 +531,14 @@ blockquote {
 	display: flex;
 	justify-content: space-between;
 	position: relative;
+	display: none;
 }
 
 .corners__wrapper .corner {
 	height: 35px;
 	width: 35px;
 	/*background-color: var(--background-dark);*/
-	background-color: white;
+	background-color: var(--background-dark);
 	position: absolute;
 }
 
@@ -831,7 +861,8 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
 	box-shadow: 0 0 40px rgb(5 5 38 / 35%);
 	border-radius: 0px;
 	overflow: hidden;
-	background-color: ghostwhite;
+	background-color: var(--background-dark-translucid);
+	/*background-color: ghostwhite;*/
 	/*transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);*/
 	/*cursor: pointer;*/
 	/*
@@ -889,6 +920,8 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
 	.bio {
 		display: none;
 	}
+
+	
 
 	iframe {
 		width: 100%;
@@ -1071,7 +1104,8 @@ div.float-right.color-text-secondary {
 }
 
 .card__highlight {
-	background-color: lavenderblush !important;
+	/*background-color: lavenderblush !important;*/
+	background-color: #233927 !important;
 }
 
 .article {
@@ -1091,6 +1125,10 @@ div.float-right.color-text-secondary {
 
 .bio-linkspace *, .linkspace *, .yell, .bookmarks * {
 	font-size: 0.95em !important;
+}
+
+.bio p:first-of-type {
+	margin-top: 1vh !important;
 }
 
 .yell {
