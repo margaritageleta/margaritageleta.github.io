@@ -1010,6 +1010,10 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
 		overflow: hidden;
 	}
 
+	.wrapper-left, .wrapper-right {
+		grid-template-columns: 10px [ini] 1fr [end] 10px !important;
+	}
+
 	body {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 0px auto;
