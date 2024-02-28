@@ -488,7 +488,7 @@ a:hover {
 }
 
 .cool-conf {
-	color:darkorchid;
+	color:yellow;
 }
 
 .cool-post {
@@ -936,7 +936,7 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
 }
 
 .card__about__no-image {
-	width: 100%;
+	width: 85%;
     height: max-content;
 	display: grid;
     grid-template-columns: 1fr;
