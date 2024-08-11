@@ -61,12 +61,13 @@ html, body, p{
     scroll-behavior: smooth;
     /*font-family: 'Rajdhani', sans-serif;*/
 	/*font-family: 'Quicksand', sans-serif;*/
-	font-family:'Lato', sans-serif;
+	font-family: "Rubik", sans-serif;
+	/*font-family:'Lato', sans-serif;*/
     font-size: x-large;
     text-align: left;
     text-align: -moz-left;
     overflow: scroll;
-    font-weight: 500;
+    font-weight: normal;
 	
 }
 
@@ -150,9 +151,9 @@ nav {
 .top__hero > div {
 	width: 100%;
 	height: 100%;
-	/*background-image: linear-gradient(to bottom left, var(--background-dark-translucid), 10%, transparent);
-	*/
-	background: linear-gradient(
+	background-image: linear-gradient(to bottom left, var(--background-dark-translucid), 10%, transparent);
+	
+	/*background: linear-gradient(
 		0deg,
 		transparent, 75%,
 		var(--background-dark), 77%,
@@ -164,7 +165,7 @@ nav {
 		var(--background-dark), 95%,
 		transparent, 97%,
 		var(--background-dark)
-	  );
+	  );*/
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -180,7 +181,7 @@ nav {
 }
 
 .card__about__no-image b {
-	color: var(--terminal-body-text)
+	color: white; /*var(--terminal-body-text)*/
 }
 
 .bio-image-wrapper {
@@ -195,12 +196,14 @@ nav {
 	background-color: ghostwhite;
 	margin-top: calc(2.5vh - 10px);
 	margin-bottom: calc(2.5vh + 10px);
-	background-image: url("../img/updated/rita_profile.jpeg");
+	background-image: url("../img/updated/rita_startupweekendsf.png");
 	background-size: cover;
 }
 
 #public-speaking {
-	background-image: url("../img/updated/rita_public_speaking.jpeg");
+	background-image: url("../img/updated/rita_dolby.png");
+	background-position: 35vh -145vh;
+    background-size: 117vh;
 }
 
 a, .card-content a span {
@@ -480,7 +483,8 @@ ul li a:hover span {
 }
 
 a:hover {
-	color:rgb(255, 78, 211) !important;
+	/*color:rgb(255, 78, 211) !important;*/
+	text-decoration: underline !important;
 }
 
 .way-cool-conf {
@@ -493,6 +497,10 @@ a:hover {
 
 .cool-post {
 	color:rgb(19, 160, 19);
+}
+
+.location-conf {
+	color:rgb(112, 236, 255);
 }
 
 section {
@@ -854,6 +862,17 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
 	perspective: 1300px;
 }
 
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #505050;
+	/*margin: 1em 0*/
+	padding: 0;
+	width: 100%;
+	margin: 5px 0 10px 0;
+}
+
 .grid.effect-7 li.animate {
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -943,6 +962,7 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
     grid-template-rows: 1fr;
 	border-radius: 0px;
 	overflow: hidden;
+	margin: 10px 0;
 }
 
 .card__about h3, .card__about__no-image h3, .card-access h4 {
@@ -976,6 +996,10 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
 }
 
 @media only screen and (max-width: 930px) {
+
+	#public-speaking {
+		background-position: -35vh 205vh;
+	}
 
 	.card__about {
 		width: 90%;
@@ -1094,6 +1118,7 @@ linear-gradient(58deg, hsla(231, 75.28%, 12.42%, 1) 0%, hsla(231, 75.28%, 12.42%
     	margin-right: 0;
 		margin-top: 0;
 		font-size: 1.75em;
+		background-position: 0vh;
 	}
 
 	.card__about__no-image {
