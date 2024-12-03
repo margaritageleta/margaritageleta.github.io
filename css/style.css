@@ -206,6 +206,7 @@ nav {
     background-size: 117vh;
 }
 
+
 a, .card-content a span {
 	font-weight: bold;
 	color: var(--terminal-body-text) !important; /* rgb(57, 108, 185) !important;*/
