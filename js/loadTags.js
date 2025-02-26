@@ -36,7 +36,7 @@ function loadMetaTags() {
 
 	<meta name="apple-mobile-web-app-title" content="3omni">
 	<meta name="application-name" content="3omni">
-	<meta name="theme-color" content="hotpink"> 
+	<meta name="theme-color" content="white"> 
     `;
     document.getElementById('head').insertAdjacentHTML('afterend', metas);
 }
