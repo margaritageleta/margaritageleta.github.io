@@ -31,7 +31,7 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #7e8d9c;
+    background-color: #637c96;
     mix-blend-mode: overlay;
     pointer-events: none;
 }
@@ -141,7 +141,7 @@ h3 {
 p {
     font-size: var(--sm-sz);
     margin-top: 20px;
-    color: #494949;
+    color: #848484;
 }
 
 b {
@@ -250,7 +250,7 @@ a {
 }
 
 #yt-demo-3 {
-    background-image: url("../img/updated/rita_madhats_2025.jpg");
+    background-image: url("../img/updated/rita_madhats_scene.png");
     background-size: cover;
 }
 
@@ -321,14 +321,13 @@ img {
 }
 
 #main-image {
-    background: url("../img/updated/rita_apple.jpeg");
-    background-size: 180%;
+    background: url("/Users/geleta/Desktop/rita_sf.png");
+    background-size: cover;
     width: 100%;
-    height: 500px;
+    height: 553px;
     grid-column-start: ini;
     grid-column-end: mid;
-    background-position: 40% 40%;
-
+    background-position: center;
 } 
 
 #main-text {
