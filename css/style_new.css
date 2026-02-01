@@ -1,6 +1,6 @@
 :root {
     --large-sz: 60px;
-    --mid-sz: 30px;
+    --mid-sz: 29px;
     --sm-sz: 20px;
 
 }
@@ -250,7 +250,7 @@ a {
 }
 
 #yt-demo-3 {
-    background-image: url("../img/updated/rita_apple.jpeg");
+    background-image: url("../img/updated/wwdc2.jpeg");
     background-size: cover;
 }
 
@@ -260,7 +260,7 @@ a {
 }
 
 #highlight-1 {
-    background-image: url("../img/updated/ge3net.png");
+    background-image: url("../img/updated/pclai.png");
     background-size: cover;
 }
 #highlight-2 {
@@ -268,11 +268,12 @@ a {
     background-size: cover;
 }
 #highlight-3 {
-    background-image: url("../img/updated/gmm.png");
+    background-image: url("../img/updated/pedigrees.png");
     background-size: cover;
 }
 #highlight-4 {
-    background-image: url("../img/updated/t2c_4.png");
+    
+    background-image: url("../img/updated/mutual_info.png");
     background-size: cover;
 }
 
